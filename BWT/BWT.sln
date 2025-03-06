@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35222.181
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Homework_1(BWT)", "Homework_1(BWT)\Homework_1(BWT).csproj", "{E5310542-5311-401E-8965-10259C6AF366}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BWT", "BWT\BWT.csproj", "{E5310542-5311-401E-8965-10259C6AF366}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestProject_1", "TestProject_1\TestProject_1.csproj", "{3586136A-16BC-4D05-AEDA-111861B7707E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BWT.Tests", "BWT.Tests\BWT.Tests.csproj", "{3586136A-16BC-4D05-AEDA-111861B7707E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
