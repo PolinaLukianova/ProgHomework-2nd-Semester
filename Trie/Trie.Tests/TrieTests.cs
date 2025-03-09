@@ -1,15 +1,9 @@
 ﻿namespace Trie.Tests;
 
-/// <summary>
-/// Tests for trie data structure.
-/// </summary>
 public class TrieTests
 {
     private Trie trie;
 
-    /// <summary>
-    /// Initializes a new instance of the Trie class and adds a set of some strings.
-    /// </summary>
     [SetUp]
     public void Setup()
     {
@@ -21,9 +15,6 @@ public class TrieTests
         this.trie.Add("ban");
     }
 
-    /// <summary>
-    /// Tests the Add method of the Trie class.
-    /// </summary>
     [Test]
     public void Trie_Add_ShouldReturnTrue()
     {
@@ -34,9 +25,6 @@ public class TrieTests
         });
     }
 
-    /// <summary>
-    /// Tests the Add method of the Trie class.
-    /// </summary>
     [Test]
     public void Trie_Add_ShouldReturnFalse()
     {
@@ -47,9 +35,6 @@ public class TrieTests
         });
     }
 
-    /// <summary>
-    /// Tests the Contains method of the Trie class.
-    /// </summary>
     [Test]
     public void Trie_Contains_ShouldReturnTrue()
     {
@@ -60,9 +45,6 @@ public class TrieTests
         });
     }
 
-    /// <summary>
-    /// Tests the Contains method of the Trie class.
-    /// </summary>
     [Test]
     public void Trie_Contains_ShouldReturnFalse()
     {
@@ -74,27 +56,18 @@ public class TrieTests
         });
     }
 
-    /// <summary>
-    /// Tests the Remove method of the Trie class.
-    /// </summary>
     [Test]
     public void Trie_Remove_ShouldReturnTrue()
     {
         Assert.That(this.trie.Contains("apple"), Is.True);
     }
 
-    /// <summary>
-    /// Tests the Remove method of the Trie class.
-    /// </summary>
     [Test]
     public void Trie_Remove_ShouldReturnFalse()
     {
         Assert.That(this.trie.Contains("appleapp"), Is.False);
     }
 
-    /// <summary>
-    /// Tests the HowManyStartsWithPrefix method of the Trie class.
-    /// </summary>
     [Test]
     public void Trie_HowManyStartsWithPrefix()
     {
@@ -107,9 +80,6 @@ public class TrieTests
         });
     }
 
-    /// <summary>
-    /// Tests the Size property of the Trie class.
-    /// </summary>
     [Test]
     public void Trie_Size()
     {
