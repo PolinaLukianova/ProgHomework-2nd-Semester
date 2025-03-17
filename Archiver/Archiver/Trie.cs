@@ -5,14 +5,23 @@
 /// </summary>
 public class Trie
 {
-    public int NextIndex;
-    private Node root = new(0);
+    private readonly Node root = new(0);
+    private int nextIndex;
     private Node? current;
 
     /// <summary>
     /// Gets the root node of the Trie.
     /// </summary>
     public Node Root => this.root;
+
+    /// <summary>
+    /// Gets or sets the next index.
+    /// </summary>
+    public int NextIndex
+    {
+        get => this.nextIndex;
+        set => this.nextIndex = value;
+    }
 
     /// <summary>
     /// Initializes the Trie with the first 256 ASCII characters.
@@ -37,5 +46,15 @@ public class Trie
         this.current.Child[nextByte] = new(nextByte, this.NextIndex);
         this.NextIndex++;
         this.current = this.Root;
+    }
+
+    /// <summary>
+    /// Checking if a byte is in Trie.
+    /// </summary>
+    /// <param name="currentByte">The byte to be checked.</param>
+    /// <returns>True if the byte is contained in Trie, otherwise false.</returns>
+    public bool Contains(byte currentByte)
+    {
+        return this.Root.Child.ContainsKey(currentByte);
     }
 }

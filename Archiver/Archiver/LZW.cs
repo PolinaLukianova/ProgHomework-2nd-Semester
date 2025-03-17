@@ -44,9 +44,9 @@ public class LZW
                     bitWidth++;
                 }
 
-                if (trie.Root.Child.TryGetValue(currentByte, out Node? node))
+                if (trie.Contains(currentByte))
                 {
-                    current = node;
+                    current = trie.Root.Child[currentByte];
                 }
                 else
                 {
