@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.13.35825.156 d17.13
+VisualStudioVersion = 17.13.35825.156
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Archiver", "Archiver\Archiver.csproj", "{3C6C347F-C821-4536-9F8E-2F646B3D9188}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Archiver.Tests", "Archiver.Tests\Archiver.Tests.csproj", "{FCABF86D-5679-4B17-BDA8-AA840E84A7C7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{3C6C347F-C821-4536-9F8E-2F646B3D9188}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3C6C347F-C821-4536-9F8E-2F646B3D9188}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3C6C347F-C821-4536-9F8E-2F646B3D9188}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FCABF86D-5679-4B17-BDA8-AA840E84A7C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCABF86D-5679-4B17-BDA8-AA840E84A7C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCABF86D-5679-4B17-BDA8-AA840E84A7C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCABF86D-5679-4B17-BDA8-AA840E84A7C7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
