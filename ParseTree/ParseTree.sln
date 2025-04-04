@@ -1,0 +1,24 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35825.156
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParseTree", "ParseTree\ParseTree.csproj", "{FDB4CB3E-4CEE-4622-925B-9217D6964B2C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FDB4CB3E-4CEE-4622-925B-9217D6964B2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FDB4CB3E-4CEE-4622-925B-9217D6964B2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FDB4CB3E-4CEE-4622-925B-9217D6964B2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FDB4CB3E-4CEE-4622-925B-9217D6964B2C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AC13DE3E-D6B7-4220-BA8B-BAC06F97D042}
+	EndGlobalSection
+EndGlobal
