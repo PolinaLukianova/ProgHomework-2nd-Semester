@@ -11,11 +11,10 @@ if (File.Exists(filePath))
         Console.WriteLine(root.WriteExpression());
         Console.WriteLine(root.Calculate());
     }
-    catch(Exception exeption)
+    catch (Exception exeption)
     {
         Console.WriteLine(exeption.Message);
     }
-    
 }
 else
 {

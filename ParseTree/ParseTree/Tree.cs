@@ -1,9 +1,29 @@
-﻿using System.Text;
+﻿namespace ParseTree;
 
-namespace ParseTree;
+using System.Text;
 
+/// <summary>
+/// Class for building a parse tree.
+/// </summary>
 public class Tree
 {
+    /// <summary>
+    /// Method for building a parse tree.
+    /// </summary>
+    /// <param name="filePath">Path to the file.</param>
+    /// <returns>Root of parse tree.</returns>
+    public static Node BuildTree(string filePath)
+    {
+        StreamReader reader = new(filePath);
+        return Parser(reader);
+    }
+
+    /// <summary>
+    /// Method for parsing an expression.
+    /// </summary>
+    /// <param name="reader">Reads chars from a file.</param>
+    /// <returns>Node of parse tree.</returns>
+    /// <exception cref="Exception">Throws exception if expression is incorrect.</exception>
     public static Node Parser(StreamReader reader)
     {
         SkipChar(reader);
@@ -12,6 +32,7 @@ public class Tree
         {
             throw new Exception("Empty file");
         }
+
         if (current == '(')
         {
             reader.Read();
@@ -19,7 +40,6 @@ public class Tree
 
             string expressionOperator = ReadToken(reader);
             SkipChar(reader);
-
 
             Node leftChild = Parser(reader);
             SkipChar(reader);
@@ -51,7 +71,6 @@ public class Tree
             else
             {
                 throw new Exception("Incorrect expression");
-
             }
         }
         else
@@ -60,7 +79,7 @@ public class Tree
         }
     }
 
-    public static void SkipChar(StreamReader reader)
+    private static void SkipChar(StreamReader reader)
     {
         while (reader.Peek() != -1 &&
             char.IsWhiteSpace((char)reader.Peek()))
@@ -69,24 +88,18 @@ public class Tree
         }
     }
 
-    public static string ReadToken(StreamReader reader)
+    private static string ReadToken(StreamReader reader)
     {
         StringBuilder token = new();
         int current;
         while ((current = reader.Peek()) != -1 &&
             (char)current != ')' &&
             (char)current != '(' &&
-            !char.IsWhiteSpace((char)current)) 
+            !char.IsWhiteSpace((char)current))
         {
             token.Append((char)reader.Read());
         }
 
         return token.ToString();
-    }
-
-    public static Node BuildTree(string filePath)
-    {
-        StreamReader reader = new(filePath);
-        return Parser(reader);
     }
 }
