@@ -6,16 +6,17 @@ public class Tree
 {
     public static Node Parser(StreamReader reader)
     {
+        SkipChar(reader);
         int current = reader.Peek();
         if (current == -1)
         {
-            throw new Exception("Incorrect expression");
+            throw new Exception("Empty file");
         }
         if (current == '(')
         {
             reader.Read();
             SkipChar(reader);
-         
+
             string expressionOperator = ReadToken(reader);
             SkipChar(reader);
 
@@ -25,7 +26,6 @@ public class Tree
 
             Node rightChild = Parser(reader);
             SkipChar(reader);
-
 
             char end = (char)reader.Read();
             if (end != ')')
@@ -39,7 +39,7 @@ public class Tree
                 "-" => new SubtractionNode(leftChild, rightChild),
                 "*" => new MultiplicationNode(leftChild, rightChild),
                 "/" => new DivisionNode(leftChild, rightChild),
-                _ => throw new Exception("The expression contains an unknown operation"),
+                _ => throw new Exception("The expression contains an unknown operation. Expected +, -, *, /"),
             };
         }
         else if (char.IsDigit((char)current))
