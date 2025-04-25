@@ -91,7 +91,7 @@ public class CalculatorLogicTests
     public void UnknownOperator_ShouldThrowException()
     {
         this.calc.EnterNumber(15);
-        Assert.Throws<Exception>(() => this.calc.EnterOperator("&"), "Unknown operator");
+        Assert.Throws<Exception>(() => this.calc.EnterOperator("&"), "Unknown operator.");
     }
 
     [Test]

@@ -76,7 +76,7 @@ public class Calculator
         }
         else
         {
-            throw new Exception("Unknown operator");
+            throw new Exception("Unknown operator.");
         }
     }
 
