@@ -2,7 +2,7 @@ name: Build
 on: [push, pull_request]
 jobs:
     build-Ubuntu:
-        if: "!contains(github.ref, 'homework-8')"
+        if: github.event.pull_request.head.ref != 'homework-8' && github.ref != 'refs/heads/homework-8'
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v4
